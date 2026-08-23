@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Mail, ExternalLink, Code } from 'lucide-react';
 
 export default function Hero() {
   return (
