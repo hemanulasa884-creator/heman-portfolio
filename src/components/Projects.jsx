@@ -28,7 +28,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="py-20 px-6 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-extrabold text-white mb-10 text-center">Featured Projects</h2>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-12 text-center">Featured Projects</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((p, index) => (
           <motion.div 
@@ -37,25 +37,25 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="glass-card p-6 rounded-2xl flex flex-col justify-between"
+            className="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl flex flex-col justify-between shadow-lg"
           >
             <div>
               <h3 className="text-xl font-bold text-sky-400 mb-3">{p.title}</h3>
-              <p className="text-slate-300 text-sm mb-6 leading-relaxed">{p.desc}</p>
+              <p className="text-slate-300 text-sm mb-6 leading-relaxed font-normal">{p.desc}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {p.tags.map((tag, tIdx) => (
-                  <span key={tIdx} className="bg-slate-900 text-sky-300 text-xs px-2.5 py-1 rounded-md border border-slate-800">
+                  <span key={tIdx} className="bg-slate-900 text-sky-300 text-xs px-2.5 py-1 rounded-md border border-slate-700">
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="flex gap-4 items-center pt-4 border-t border-slate-800">
-              <a href={p.github} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white text-sm underline">
+            <div className="flex gap-4 items-center pt-4 border-t border-slate-700/60">
+              <a href={p.github} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white text-sm font-medium">
                 GitHub Repo
               </a>
-              <a href={p.demo} target="_blank" rel="noreferrer" className="ml-auto bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-1.5 rounded-lg text-xs transition">
+              <a href={p.demo} target="_blank" rel="noreferrer" className="ml-auto bg-sky-500 hover:bg-sky-400 text-white font-semibold px-4 py-1.5 rounded-lg text-xs transition shadow-md shadow-sky-500/20">
                 Live Demo ↗
               </a>
             </div>

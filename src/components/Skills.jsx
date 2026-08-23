@@ -14,7 +14,7 @@ const skillCategories = [
 export default function Skills() {
   return (
     <section id="skills" className="py-20 px-6 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-extrabold text-white mb-10 text-center">Technical Skills</h2>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-12 text-center">Technical Skills</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((cat, idx) => (
           <motion.div 
@@ -23,12 +23,12 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: idx * 0.05 }}
-            className="glass-card p-6 rounded-2xl"
+            className="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl shadow-lg"
           >
             <h3 className="text-sky-400 font-bold text-lg mb-4">{cat.name}</h3>
             <div className="flex flex-wrap gap-2">
               {cat.skills.map((s, sIdx) => (
-                <span key={sIdx} className="bg-slate-900 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-800">
+                <span key={sIdx} className="bg-slate-900 text-slate-200 text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-700/60">
                   {s}
                 </span>
               ))}
