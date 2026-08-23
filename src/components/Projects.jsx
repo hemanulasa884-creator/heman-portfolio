@@ -5,7 +5,7 @@ const projects = [
     title: "Enterprise RAG Knowledge Engine",
     desc: "Production-grade RAG pipeline using FastAPI, LangChain, Qdrant Vector DB, and OpenAI with PDF ingestion and semantic chunking.",
     github: "https://github.com/hemanulasa884-creator/heman-portfolio/tree/main/enterprise-rag-engine",
-    demo: "#",
+    demo: "http://localhost:5174", // Replace with your deployed URL (e.g. Vercel) when live
     tags: ["FastAPI", "Python", "LangChain", "Qdrant", "React", "OpenAI"]
   },
   {
@@ -35,8 +35,13 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-            <div className="flex gap-4">
-              <a href={p.github} target="_blank" rel="noreferrer" className="text-slate-300 hover:text-white underline text-sm">GitHub Repo</a>
+            <div className="flex gap-4 items-center">
+              <a href={p.github} target="_blank" rel="noreferrer" className="text-slate-300 hover:text-white underline text-sm">
+                GitHub Repo
+              </a>
+              <a href={p.demo} target="_blank" rel="noreferrer" className="bg-sky-500 hover:bg-sky-600 text-white font-medium px-3 py-1.5 rounded text-sm transition">
+                Live Demo ↗
+              </a>
             </div>
           </div>
         ))}
