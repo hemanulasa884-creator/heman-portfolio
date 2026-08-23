@@ -8,6 +8,20 @@ export default function About() {
         {/* Experience & Education */}
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <h2 className="text-2xl font-bold text-white mb-6">Work Experience</h2>
+          
+          {/* Asian Technology Solutions Internship */}
+          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 mb-6">
+            <span className="text-xs text-sky-400 font-semibold uppercase">Dec 2025 – June 2026</span>
+            <h3 className="text-lg font-bold text-white mt-1">Intern - Full Stack Developer</h3>
+            <p className="text-slate-400 text-sm mb-3">Asian Technology Solutions Pvt Ltd | Hyderabad, India</p>
+            <ul className="list-disc list-inside text-slate-300 text-sm space-y-1">
+              <li>Assisted in developing and maintaining scalable web applications using front-end and back-end stacks.</li>
+              <li>Engineered custom REST APIs, integrated database solutions, and connected modern web frameworks.</li>
+              <li>Collaborated with senior development teams on real-world production projects.</li>
+            </ul>
+          </div>
+
+          {/* MERN Internship */}
           <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 mb-8">
             <span className="text-xs text-sky-400 font-semibold uppercase">July 2025 – Sep 2025</span>
             <h3 className="text-lg font-bold text-white mt-1">MERN Stack Developer Intern</h3>
@@ -15,7 +29,7 @@ export default function About() {
             <ul className="list-disc list-inside text-slate-300 text-sm space-y-1">
               <li>Designed RESTful APIs using Node.js, Express.js, and MongoDB.</li>
               <li>Implemented JWT authentication and role-based access control.</li>
-              <li>Tested endpoints using Postman and managed source code with Git.</li>
+              <li>Tested endpoints using Postman and managed version control with Git.</li>
             </ul>
           </div>
 
@@ -41,6 +55,7 @@ export default function About() {
           <h2 className="text-2xl font-bold text-white mb-6">Certifications</h2>
           <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 mb-8 space-y-3">
             {[
+              "Full Stack Developer Internship Certificate – Asian Technology Solutions",
               "Python Essentials 1 – Cisco Networking Academy",
               "Python Essentials 2 – Cisco Networking Academy",
               "Machine Learning for Computer Vision – MathWorks",
