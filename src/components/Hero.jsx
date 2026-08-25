@@ -38,7 +38,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-          Final-year B.Tech CSE (AI & ML) student engineering high-performance RAG pipelines, AI-driven applications, and enterprise web solutions.
+          Software Developer & AI/ML Engineer specializing in developing scalable web applications, intelligent AI models, and enterprise-grade software solutions[cite: 1, 2].
         </p>
 
         <div className="flex flex-wrap gap-5 justify-center items-center">
