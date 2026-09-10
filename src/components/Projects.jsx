@@ -1,28 +1,28 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import VanillaTilt from 'vanilla-tilt';
-import { FolderGit2, Play, Sparkles } from 'lucide-react';
+import { FolderGit2, Play, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
     title: "Enterprise RAG Knowledge Engine",
     desc: "Production-grade RAG pipeline featuring PDF document ingestion, semantic chunking, Qdrant vector store search, and contextual response verification using OpenAI and FastAPI.",
     github: "https://github.com/hemanulasa884-creator/heman-portfolio/tree/main/enterprise-rag-engine",
-    demo: "http://localhost:5174",
+    demo: "", // Replace with your live deployed URL (e.g., https://rag-engine.vercel.app)
     tags: ["FastAPI", "Python", "LangChain", "Qdrant", "React", "OpenAI"]
   },
   {
     title: "Healthcare AI Chatbot",
     desc: "AI-powered medical assistant generating contextual healthcare guidance with real-time interaction, FastAPI backend, LLM API integration, JWT security, and MongoDB storage.",
-    github: "https://github.com/hemanulasa884-creator/heman-portfolio",
-    demo: "#",
+    github: "https://github.com/hemanulasa884-creator/heman-portfolio/tree/main/healthcare-ai-chatbot",
+    demo: "", // Replace with your live deployed URL
     tags: ["Python", "FastAPI", "MongoDB", "JWT", "LLM API", "HTML/CSS/JS"]
   },
   {
     title: "Doctor Appointment & Health Record System",
     desc: "Full-stack MERN application simplifying online doctor appointment scheduling and health records management with role-based access control (Doctor, Patient, Admin).",
     github: "https://github.com/hemanulasa884-creator/heman-portfolio",
-    demo: "#",
+    demo: "", // Replace with your live deployed URL
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Postman"]
   }
 ];
@@ -41,6 +41,8 @@ function ProjectCard({ p, index }) {
       });
     }
   }, []);
+
+  const hasLiveDemo = p.demo && p.demo.trim() !== "" && p.demo !== "#" && !p.demo.includes("localhost");
 
   return (
     <motion.div 
@@ -84,12 +86,32 @@ function ProjectCard({ p, index }) {
           className="flex gap-4 items-center pt-5 border-t border-slate-700/60"
           style={{ transform: 'translateZ(20px)' }}
         >
-          <a href={p.github} target="_blank" rel="noreferrer" className="text-slate-300 hover:text-white text-sm font-semibold flex items-center gap-2">
+          <a 
+            href={p.github} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-slate-300 hover:text-white text-sm font-semibold flex items-center gap-2 transition-colors"
+          >
             <FolderGit2 size={16} /> Code
           </a>
-          <a href={p.demo} target="_blank" rel="noreferrer" className="ml-auto text-white font-bold px-4 py-2 rounded-lg text-xs flex items-center gap-1.5" style={{ backgroundColor: '#0284c7' }}>
-            <Play size={14} /> Live Demo
-          </a>
+
+          {hasLiveDemo ? (
+            <a 
+              href={p.demo} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="ml-auto text-white font-bold px-4 py-2 rounded-lg text-xs flex items-center gap-1.5 transition-opacity hover:opacity-90 shadow-md" 
+              style={{ backgroundColor: '#0284c7' }}
+            >
+              <Play size={14} /> Live Demo
+            </a>
+          ) : (
+            <span 
+              className="ml-auto text-slate-400 font-medium px-3 py-1.5 rounded-lg text-xs border border-slate-700 bg-slate-800/50 cursor-not-allowed select-none"
+            >
+              Demo Coming Soon
+            </span>
+          )}
         </div>
       </div>
     </motion.div>
