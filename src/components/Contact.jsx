@@ -1,15 +1,29 @@
-export default function Contact() {
-  return (
-    <section className="py-16 text-center">
-      <h2 className="text-3xl font-bold mb-6">Contact</h2>
+<div className="flex gap-6 justify-center items-center mt-4">
+  {/* Email */}
+  <a
+    href="mailto:hemanulasa884@gmail.com"
+    className="text-gray-300 hover:text-white transition-colors duration-200"
+  >
+    Email
+  </a>
 
-      <p className="text-gray-400 mb-4">Let's work together 🚀</p>
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/heman-ulasa-639422327"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-white transition-colors duration-200"
+  >
+    LinkedIn
+  </a>
 
-      <div className="flex justify-center gap-6">
-        <a href="#">Email</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-      </div>
-    </section>
-  );
-}
+  {/* GitHub */}
+  <a
+    href="https://github.com/hemanulasa884-creator"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-white transition-colors duration-200"
+  >
+    GitHub
+  </a>
+</div>
