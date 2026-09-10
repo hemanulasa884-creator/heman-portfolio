@@ -35,7 +35,7 @@ export default function Contact() {
 
         {/* GitHub */}
         <a
-          href="https://github.com/hemanulasa884-creator"
+          href="https://github.com/hemanulasa884-creator/heman-portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-700/70 bg-slate-900/60 hover:border-cyan-400 hover:text-cyan-400 text-slate-300 transition-all duration-200 text-sm font-medium shadow-md hover:shadow-cyan-500/10"
